@@ -1,11 +1,8 @@
 package banks
 
 import (
-	// "encoding/json"
-	// "fmt"
 	"encoding/json"
 	"fmt"
-
 	"github.com/philipelima/brasilapi-go/utils/request"
 )
 
