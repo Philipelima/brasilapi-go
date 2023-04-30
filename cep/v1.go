@@ -59,30 +59,3 @@ func newCepV1Response(response string) (*CepV1Response, error) {
 
 	return &cepResponse, nil
 }
-
-
-func (cr *CepV1Response) GetCep() string {
-	return cr.Cep
-}
-
-func (cr *CepV1Response) GetStreet() string {
-	return cr.Street
-}
-
-func (cr *CepV1Response) GetNeighborhood() string {
-	return cr.Neighborhood
-}
-
-
-func (cr *CepV1Response) GetCity() string {
-	return cr.City
-}
-
-
-func (cr *CepV1Response) GetState() string {
-	return cr.State
-}
-
-func (cr *CepV1Response) GetService() string {
-	return cr.Service
-}
