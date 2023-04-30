@@ -1,8 +1,8 @@
 package cnpj
 
 import (
-	"encoding/json"
 	"fmt"
+	"github.com/philipelima/brasilapi-go/utils/parse"
 	"github.com/philipelima/brasilapi-go/utils/request"
 )
 
@@ -86,6 +86,8 @@ func (c *CnpjV1) Get(cnpj string) (*Cnpj, error) {
 
 	url := fmt.Sprintf(c.base, cnpj)
 
+	var cnpjData *Cnpj
+
 	c.request = request.NewRequest(url, nil)
 
 	cnpj, err := c.request.Get()
@@ -94,19 +96,7 @@ func (c *CnpjV1) Get(cnpj string) (*Cnpj, error) {
 		return nil, err
 	}
 
-	return cnpjResponse(cnpj)
-}
+	parse.StrToStruct(cnpj, &cnpjData)
 
-
-func cnpjResponse(response string) (*Cnpj, error) {
- 
-	var cnpj Cnpj
-
-	err := json.Unmarshal([]byte(response), &cnpj)
-
-	if err != nil {
-		return nil, err
-	}
-
-	return &cnpj, nil
+	return cnpjData, nil
 }
