@@ -9,7 +9,6 @@ import (
 
 type CnpjV1 struct {
 	base    string 
-	request *request.Request
 }
 
 
@@ -88,9 +87,9 @@ func (c *CnpjV1) Get(cnpj string) (*Cnpj, error) {
 
 	var cnpjData *Cnpj
 
-	c.request = request.NewRequest(url, nil)
+	request := request.NewRequest(url, nil)
 
-	cnpj, err := c.request.Get()
+	cnpj, err := request.Get()
 
 	if err != nil {
 		return nil, err
