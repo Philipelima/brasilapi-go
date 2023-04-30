@@ -60,27 +60,27 @@ func (b *BanksV1) Get(code string) (*Bank, error) {
 
 func banksResponse(response string) (*[]Bank, error) {
 
-	var banksResponse []Bank
+	var banks []Bank
 
-	err := json.Unmarshal([]byte(response), &banksResponse)
+	err := json.Unmarshal([]byte(response), &banks)
 
 	if err != nil {
 		return nil, err
 	}
 
-	return &banksResponse, nil
+	return &banks, nil
 }
 
 
 func bankResponse(response string) (*Bank, error) {
 
-	var bankResponse Bank
+	var bank Bank
 
-	err := json.Unmarshal([]byte(response), &bankResponse)
+	err := json.Unmarshal([]byte(response), &bank)
 
 	if err != nil {
 		return nil, err
 	}
 
-	return &bankResponse, nil
+	return &bank, nil
 }
