@@ -1,9 +1,8 @@
 package cep
 
 import (
-	"encoding/json"
 	"fmt"
-
+	"github.com/philipelima/brasilapi-go/utils/parse"
 	"github.com/philipelima/brasilapi-go/utils/request"
 )
 
@@ -31,6 +30,8 @@ func V1() *CepV1 {
 
 func (c *CepV1) Get(cep string) (*CepV1Response, error) {
 	
+	var cepData *CepV1Response
+
 	url := fmt.Sprintf(c.base, cep)
 
 	c.request = request.NewRequest(url, nil)
@@ -43,19 +44,9 @@ func (c *CepV1) Get(cep string) (*CepV1Response, error) {
 		return nil, err
 	}
 
-    return newCepV1Response(cep)
+	parse.StrToStruct(cep, &cepData)
+
+    return cepData, nil 
 }
 
 
-func newCepV1Response(response string) (*CepV1Response, error) {
-	
-	var cepResponse CepV1Response
-
-	err := json.Unmarshal([]byte(response), &cepResponse)
-
-	if err != nil {
-		return nil, err
-	}
-
-	return &cepResponse, nil
-}
