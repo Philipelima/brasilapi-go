@@ -9,25 +9,25 @@ import (
 )
 
 type Exchange struct {
-	Bairro string
-	Cep string
-	Cnpj string
-	Codigo_cvm string
-	Complemento string
-	Data_inicio_situacao string
-	Data_patrimonio_liquido string
-	Data_registro string
-	Email string
-	Logradouro string
-	Municipio string
-	Nome_social string
-	Nome_comercial string
-	Pais string
-	Status string
-	Telefone string
-	Type string
-	Uf string
-	Valor_patrimonio_liquido string
+	Bairro string `json:"bairro"`
+	Cep string	  `json:"cep"`
+	Cnpj string	  `json:"cnpj"`
+	Codigo_cvm string `json:"codigo_cvm"`
+	Complemento string `json:"complemento"`
+	Data_inicio_situacao string `json:"data_inicio_situacao"`
+	Data_patrimonio_liquido string `json:"data_patrimonio_liquido"`
+	Data_registro string `json:"data_registro"`
+	Email string  `json:"email"`
+	Logradouro string `json:"logradouro"`
+	Municipio string `json:"municipio"`
+	Nome_social string `json:"nome_social"`
+	Nome_comercial string `json:"nome_comercial"`
+	Pais string `json:"pais"`
+	Status string `json:"status"`
+	Telefone string `json:"telefone"`
+	Type string `json:"type"`
+	Uf string `jso:"uf"`
+	Valor_patrimonio_liquido string `json:"valor_patrimonio_liquido"`
 }
 
 type ExchangesV1 struct {
