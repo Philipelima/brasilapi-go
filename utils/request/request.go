@@ -68,15 +68,6 @@ func (r *Request) Get() (string, error){
 }
 
 
-func (r *Request) Post() {
-
-	r.method = "POST"
-
-
-}
-
-
-
 func (r *Request) do() (string, error) {
 
 	request, err := http.NewRequest(r.method, r.url, nil)
