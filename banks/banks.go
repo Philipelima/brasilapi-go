@@ -1,8 +1,8 @@
 package banks
 
 import (
-	"encoding/json"
 	"fmt"
+	"github.com/philipelima/brasilapi-go/utils/parse"
 	"github.com/philipelima/brasilapi-go/utils/request"
 )
 
@@ -27,6 +27,8 @@ func V1() *BanksV1 {
 
 func (b *BanksV1) All() (*[]Bank, error) {
 
+	var banksResult *[]Bank
+
 	b.request = request.NewRequest(b.base, nil)
 
 	b.request.SetHeader("Content-Type", "application/json")
@@ -37,11 +39,15 @@ func (b *BanksV1) All() (*[]Bank, error) {
 		return nil, err
 	}
 
-	return banksResponse(banks)
+	parse.StrToStruct(banks, &banksResult)
+
+	return banksResult, nil
 }
 
 
 func (b *BanksV1) Get(code string) (*Bank, error) {
+	
+	var result *Bank
 
 	url := fmt.Sprintf("%s/%s", b.base, code)
 
@@ -55,32 +61,8 @@ func (b *BanksV1) Get(code string) (*Bank, error) {
 		return nil, err
 	}
 
-	return bankResponse(bank)
+	parse.StrToStruct(bank, &result)
+
+	return result, nil
 }
 
-func banksResponse(response string) (*[]Bank, error) {
-
-	var banks []Bank
-
-	err := json.Unmarshal([]byte(response), &banks)
-
-	if err != nil {
-		return nil, err
-	}
-
-	return &banks, nil
-}
-
-
-func bankResponse(response string) (*Bank, error) {
-
-	var bank Bank
-
-	err := json.Unmarshal([]byte(response), &bank)
-
-	if err != nil {
-		return nil, err
-	}
-
-	return &bank, nil
-}
