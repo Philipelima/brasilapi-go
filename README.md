@@ -1,7 +1,5 @@
 # brasilapi-go
 
-<center>
-
-![logo brasilApi](https://raw.githubusercontent.com/BrasilAPI/BrasilAPI/master/public/brasilapi-logo-small.png "BrasilApi")
-
-</center>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/BrasilAPI/BrasilAPI/master/public/brasilapi-logo-small.png" alt="Sublime's custom image"/>
+</p>
