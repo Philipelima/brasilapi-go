@@ -22,6 +22,8 @@ Para que você possa utilizar este SDK em seu projeto, primeiramente é necessá
     go get -u https://github.com/philipelima/brasilapi-go
 ~~~
 
+<br>
+
 Após a instalação, você poderá importar os packages da seguinte forma:
 
 ~~~go
