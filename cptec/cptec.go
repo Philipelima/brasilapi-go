@@ -16,7 +16,7 @@ func getBasesForCptecRequests() map[string]string {
 
 	bases := make(map[string]string)
 
-	bases["locales"] 		 = "https://brasilapi.com.br/api/cptec/v1/cidade"
+	bases["locales"] = "https://brasilapi.com.br/api/cptec/v1/cidade"
 	bases["current_weather"] = "https://brasilapi.com.br/api/cptec/v1/clima"
 	bases["ocean"]     	     = "https://brasilapi.com.br/api/cptec/v1/ondas"
 
