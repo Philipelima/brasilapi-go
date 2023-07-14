@@ -10,11 +10,11 @@ SDK desenvolvido com o objetivo de facilitar a integração de sistemas e API's 
 
 
 
-## Importando o SDK
+### Utilizando o SDK em seu projeto
 
 <br>
 
-Para que você possa utilizar este SDK em seu projeto, é necessário rodar o seguinte comando:
+Para que você possa utilizar este SDK em seu projeto, primeiramente é necessário rodar o seguinte comando:
 
 <br>
 
