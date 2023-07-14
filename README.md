@@ -8,7 +8,7 @@
 
 SDK desenvolvido com o objetivo de facilitar a integração de sistemas e API's desenvolvidos em Golang com a [BrasilApi](https://brasilapi.com.br/).
 
-<br>
+
 
 ### Importando o SDK
 
