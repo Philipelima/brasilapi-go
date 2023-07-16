@@ -48,19 +48,18 @@ A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a
 
 ~~~go
 
-  package main
-
   import "github.com/philipelima/brasilapi-go/cep"
 
+~~~
 
-  func main() {
+**V1:**
 
-    // Consulta de Cep na versão 1
-    cepV1, errV1 := cep.V1().Get("47000000")
+~~~go
+  cepV1, err := cep.V1().Get("47000000")
+~~~
 
-    // Consulta de Cep na versão 2
-    cepV2, errV2 := cep.V2().Get("47000000")
+**V2:**
 
-  }
-
+~~~go
+  cepV2, errV2 := cep.V2().Get("47000000")
 ~~~
