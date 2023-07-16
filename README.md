@@ -59,8 +59,8 @@ A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a
     cepV1, errV1 := cep.V1().Get("47000000")
 
     // Consulta de Cep na versão 2
-    cepV2, errV2 := cep.V2.Get("47000000")
+    cepV2, errV2 := cep.V2().Get("47000000")
 
   }
-  
+
 ~~~
