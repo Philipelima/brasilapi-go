@@ -43,20 +43,6 @@ Veja a baixo, exemplos de utilizações do SDK.
 
 <br>
 
-~~~go
-  import "github.com/philipelima/brasilapi-go/cep"
-~~~
-
-Para consultar varios bancos de uma vez:
-
-
-
-<br>
-
-#### BANCOS
-
-<br>
-
 Buscando informações sobre o sistema bancário brasileiro.
 
 ~~~go
