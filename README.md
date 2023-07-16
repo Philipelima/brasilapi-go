@@ -41,8 +41,6 @@ Veja a baixo, exemplos de utilizações do SDK.
 
 #### BANCOS
 
-<br>
-
 Buscando informações sobre o sistema bancário brasileiro.
 
 ~~~go
@@ -66,10 +64,9 @@ Para consultar um banco especifico, é necessário saber o código de compensaç
   bank, err := banks.V1().Get(code)
 ~~~
 
+<br>
 
 #### CEP
-
-<br>
 
 A api [BrasilApi](https://brasilapi.com.br/) disponibiliza duas versões para consulta de cep, veja a baixo a consulta por meio da versão **V1** e **V2**.
 
