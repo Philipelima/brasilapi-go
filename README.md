@@ -31,3 +31,36 @@ Após a instalação, você poderá importar os packages da seguinte forma:
 ~~~
 
 
+<br>
+
+### Utilizando o SDK
+
+Veja a baixo, exemplos de utilizações do SDK.
+
+<br>
+
+#### CEP
+
+<br>
+
+A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a consulta por meio da versão **V1** e **V2**.
+
+
+~~~go
+
+  package main
+
+  import "github.com/philipelima/brasilapi-go/cep"
+
+
+  func main() {
+
+    // Consulta de Cep na versão 1
+    cepV1, errV1 := cep.V1().Get("47000000")
+
+    // Consulta de Cep na versão 2
+    cepV2, errV2 := cep.V2.Get("47000000")
+
+  }
+  
+~~~
