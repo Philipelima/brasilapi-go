@@ -45,6 +45,7 @@ Veja a baixo, exemplos de utilizações do SDK.
 
 A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a consulta por meio da versão **V1** e **V2**.
 
+<br>
 
 ~~~go
 
@@ -55,11 +56,11 @@ A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a
 **V1:**
 
 ~~~go
-  cepV1, err := cep.V1().Get("47000000")
+  cep, err := cep.V1().Get("47000000")
 ~~~
 
 **V2:**
 
 ~~~go
-  cepV2, errV2 := cep.V2().Get("47000000")
+  cep, err := cep.V2().Get("47000000")
 ~~~
