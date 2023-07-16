@@ -27,7 +27,7 @@ Para que você possa utilizar este SDK em seu projeto, primeiramente é necessá
 Após a instalação, você poderá importar os packages da seguinte forma:
 
 ~~~go
-    import "https://github.com/philipelima/brasilapi-go/{package_name}"
+  import "https://github.com/philipelima/brasilapi-go/{package_name}"
 ~~~
 
 
@@ -39,18 +39,57 @@ Veja a baixo, exemplos de utilizações do SDK.
 
 <br>
 
-#### CEP
-
-<br>
-
-A api BrasilApi disponibiliza duas versões para consulta de cep, veja a baixo a consulta por meio da versão **V1** e **V2**.
+#### BANCOS
 
 <br>
 
 ~~~go
-
   import "github.com/philipelima/brasilapi-go/cep"
+~~~
 
+Para consultar varios bancos de uma vez:
+
+
+
+<br>
+
+#### BANCOS
+
+<br>
+
+Buscando informações sobre o sistema bancário brasileiro.
+
+~~~go
+  import "github.com/philipelima/brasilapi-go/banks"
+~~~
+
+**Consultando todos os bancos:**
+
+~~~go
+  banks, err := banks.V1().All()
+~~~
+
+**Consultando um banco especifico:**
+
+Para consultar um banco especifico, é necessário saber o código de compensação do banco que você deseja consultar. Veja tabela de códigos aqui [Aqui](https://www.bcb.gov.br/Fis/CODCOMPE/Tabela.pdf). 
+
+
+~~~go
+  code := 237 // Código Banco Bradesco S.A 
+
+  bank, err := banks.V1().Get(code)
+~~~
+
+
+#### CEP
+
+<br>
+
+A api [BrasilApi](https://brasilapi.com.br/) disponibiliza duas versões para consulta de cep, veja a baixo a consulta por meio da versão **V1** e **V2**.
+
+
+~~~go
+  import "github.com/philipelima/brasilapi-go/cep"
 ~~~
 
 **V1:**
