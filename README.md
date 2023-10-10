@@ -6,7 +6,7 @@
 <hr>
 <br>
 
-SDK desenvolvido com o objetivo de facilitar a integração de sistemas e API's desenvolvidos em Golang com a [BrasilApi](https://brasilapi.com.br/).
+SDK desenvolvido com o objetivo de facilitar a integração de sistemas e serviços desenvolvidos em Golang com a [BrasilApi](https://brasilapi.com.br/).
 
 
 
